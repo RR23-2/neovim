@@ -13,6 +13,7 @@ return {
 					"lua_ls",
 					"tsserver",
 					"ast_grep",
+          "volar"
 				},
 			})
 		end,
@@ -32,6 +33,10 @@ return {
 			lspconfig.ast_grep.setup({
 				capabilities = capabilities
 			})
+      lspconfig.volar.setup({
+        capabilities = capabilities,
+        filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
+      })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
