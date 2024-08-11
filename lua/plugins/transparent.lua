@@ -28,6 +28,8 @@ return {
 				"StatusLine",
 				"StatusLineNC",
 				"EndOfBuffer",
+        "NeoTreeNormal",
+        "NeoTreeNormalNC",
 			},
 			extra_groups = {
 				"NvimTree",

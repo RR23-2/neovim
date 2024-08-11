@@ -6,3 +6,17 @@ vim.g.mapleader = " "
 vim.cmd(":set number")
 local opt = vim.opt
 opt.clipboard:append("unnamedplus")
+vim.cmd([[
+  hi Normal guibg=NONE ctermbg=NONE
+  hi NormalNC guibg=NONE ctermbg=NONE
+  hi SignColumn guibg=NONE ctermbg=NONE
+  hi FoldColumn guibg=NONE ctermbg=NONE
+  hi EndOfBuffer guibg=NONE ctermbg=NONE
+  hi NonText guibg=NONE ctermbg=NONE
+]])
+vim.cmd([[
+  hi LineNr guibg=ctermbg
+  set foldcolumn=2
+  hi foldcolumn guibg=ctermbg
+  hi VertSplit guibg=ctermbg guifg=ctermfg
+]])
