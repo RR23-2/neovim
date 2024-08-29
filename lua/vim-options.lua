@@ -1,19 +1,31 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.g.mapleader = " "
-vim.cmd(":set number")
 local opt = vim.opt
-opt.clipboard:append("unnamedplus")
-vim.cmd([[
-  hi Normal guibg=NONE ctermbg=NONE
-  hi NormalNC guibg=NONE ctermbg=NONE
-  hi SignColumn guibg=NONE ctermbg=NONE
-  hi FoldColumn guibg=NONE ctermbg=NONE
-  hi EndOfBuffer guibg=NONE ctermbg=NONE
-  hi NonText guibg=NONE ctermbg=NONE
-]])
+
+opt.clipboard:append("unnamedplus") -- clipboard
+
+-- line
+opt.relativenumber = true -- relative number
+opt.number = true -- line numbering
+
+-- indentation
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.autoindent = true
+
+-- search
+opt.ignorecase = true
+opt.smartcase = true
+
+-- apperance
+opt.termguicolors = true
+opt.background = "dark"
+opt.signcolumn = "yes"
+
+-- backspace
+opt.backspace = "indent,eol,start"
+
+opt.iskeyword:append("-")
+
 vim.cmd([[
     highlight Normal guibg=NONE ctermbg=NONE
     highlight LineNr guibg=NONE ctermbg=NONE

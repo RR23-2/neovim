@@ -10,10 +10,11 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua_ls",
+					-- "lua_ls",
 					"tsserver",
-					"ast_grep",
-          "volar"
+          "pyright",
+					-- "ast_grep",
+          -- "volar"
 				},
 			})
 		end,
